@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock, Paper, Scissors - Points</title>
+</head>
+<body>
+    <h1>Points and Winner</h1>
+    
+    <p>User Points: {{ user_points }}</p>
+    <p>Computer Points: {{ computer_points }}</p>
+    <h2>{{ final_winner }}</h2>
+
+    <ul>
+        {% for result in results %}
+            <li>{{ result }}</li>
+        {% endfor %}
+    </ul>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Play Again</button>
+    </form>
+</body>
+</html>
